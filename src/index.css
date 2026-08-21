@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* --- Paleta Santoryu (derivada de la ilustración de referencia) --- */
+    --ink: 262 45% 8%;          /* casi negro violáceo */
+    --void: 260 42% 11%;        /* fondo base */
+    --plum: 265 45% 18%;        /* superficie clay media */
+    --plum-2: 266 40% 24%;      /* superficie clay clara */
+    --violet: 262 83% 58%;      /* morado eléctrico (rayo de fondo) */
+    --lime: 78 78% 58%;         /* verde lima (filo) */
+    --cyan: 187 72% 55%;        /* cian (filo) */
+    --gold: 39 82% 58%;         /* dorado (guardas de la espada) */
+    --sand: 32 45% 88%;         /* piel/crema para texto claro sobre clay oscuro */
+
+    --background: var(--void);
+    --foreground: 32 40% 94%;
+    --card: var(--plum);
+    --card-foreground: 32 40% 94%;
+    --popover: var(--plum);
+    --popover-foreground: 32 40% 94%;
+    --primary: var(--lime);
+    --primary-foreground: 262 45% 10%;
+    --secondary: var(--cyan);
+    --secondary-foreground: 262 45% 10%;
+    --muted: 265 30% 22%;
+    --muted-foreground: 32 20% 72%;
+    --accent: var(--gold);
+    --accent-foreground: 262 45% 10%;
+    --destructive: 6 70% 55%;
+    --destructive-foreground: 32 40% 94%;
+    --border: 265 30% 26%;
+    --input: 265 30% 26%;
+    --ring: var(--lime);
+    --radius: 1.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    background:
+      radial-gradient(60rem 40rem at 85% -10%, hsl(262 83% 30% / 0.35), transparent 60%),
+      radial-gradient(50rem 35rem at -10% 20%, hsl(187 72% 30% / 0.18), transparent 55%),
+      hsl(var(--void));
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  /* ============ Sistema Claymorphism ============ */
+
+  .clay {
+    border-radius: var(--radius);
+    background: linear-gradient(155deg, hsl(var(--plum-2)), hsl(var(--plum)));
+    box-shadow:
+      10px 10px 22px hsl(262 50% 5% / 0.55),
+      -8px -8px 20px hsl(266 45% 32% / 0.35),
+      inset 1px 1px 1px hsl(0 0% 100% / 0.06);
+  }
+
+  .clay-inset {
+    border-radius: var(--radius);
+    background: linear-gradient(155deg, hsl(var(--ink)), hsl(265 40% 14%));
+    box-shadow:
+      inset 6px 6px 14px hsl(262 55% 3% / 0.65),
+      inset -6px -6px 14px hsl(266 40% 26% / 0.25);
+  }
+
+  .clay-btn {
+    border-radius: 999px;
+    box-shadow:
+      6px 6px 14px hsl(262 50% 5% / 0.5),
+      -5px -5px 12px hsl(266 45% 34% / 0.3),
+      inset 1px 1px 1px hsl(0 0% 100% / 0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .clay-btn:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow:
+      inset 4px 4px 10px hsl(262 55% 3% / 0.4),
+      inset -3px -3px 8px hsl(0 0% 100% / 0.15);
+  }
+
+  .clay-chip {
+    border-radius: 999px;
+    box-shadow:
+      4px 4px 10px hsl(262 50% 5% / 0.45),
+      -3px -3px 8px hsl(266 45% 34% / 0.25);
+  }
+
+  .text-gradient-clay {
+    background: linear-gradient(95deg, hsl(var(--lime)) 0%, hsl(var(--cyan)) 55%, hsl(var(--gold)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .clay-edge {
+    position: relative;
+  }
+
+  .clay-edge::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, hsl(var(--lime) / 0.6), hsl(var(--cyan) / 0.4) 45%, transparent 70%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .noise-veil {
+    background-image: radial-gradient(hsl(0 0% 100% / 0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
