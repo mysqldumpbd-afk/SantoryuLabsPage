@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Cosmic Shutter | Santoryu Labs</title>
+<meta name="description" content="Privacy policy for Cosmic Shutter, a fan-made scorekeeping companion app by Santoryu Labs." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<style>
+  :root{
+    --ink: 262 45% 8%;
+    --void: 260 42% 11%;
+    --plum: 265 45% 18%;
+    --plum-2: 266 40% 24%;
+    --violet: 262 83% 58%;
+    --lime: 78 78% 58%;
+    --cyan: 187 72% 55%;
+    --gold: 39 82% 58%;
+    --sand: 32 45% 88%;
+    --fg: 32 40% 94%;
+    --fg-muted: 32 20% 72%;
+    --radius: 1.75rem;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Manrope', ui-sans-serif, system-ui, sans-serif;
+    color:hsl(var(--fg));
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    background:
+      radial-gradient(60rem 40rem at 85% -10%, hsl(262 83% 30% / 0.35), transparent 60%),
+      radial-gradient(50rem 35rem at -10% 20%, hsl(187 72% 30% / 0.18), transparent 55%),
+      hsl(var(--void));
+    background-attachment:fixed;
+  }
+  h1,h2,h3,.font-display{font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;}
+
+  .clay{
+    border-radius:var(--radius);
+    background:linear-gradient(155deg, hsl(var(--plum-2)), hsl(var(--plum)));
+    box-shadow:
+      10px 10px 22px hsl(262 50% 5% / 0.55),
+      -8px -8px 20px hsl(266 45% 32% / 0.35),
+      inset 1px 1px 1px hsl(0 0% 100% / 0.06);
+  }
+  .clay-inset{
+    border-radius:1.25rem;
+    background:linear-gradient(155deg, hsl(var(--ink)), hsl(265 40% 14%));
+    box-shadow:
+      inset 6px 6px 14px hsl(262 55% 3% / 0.65),
+      inset -6px -6px 14px hsl(266 40% 26% / 0.25);
+  }
+  .clay-btn{
+    border-radius:999px;
+    box-shadow:
+      6px 6px 14px hsl(262 50% 5% / 0.5),
+      -5px -5px 12px hsl(266 45% 34% / 0.3),
+      inset 1px 1px 1px hsl(0 0% 100% / 0.25);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .clay-btn:active{
+    transform:translateY(2px) scale(.98);
+    box-shadow:
+      inset 4px 4px 10px hsl(262 55% 3% / .4),
+      inset -3px -3px 8px hsl(0 0% 100% / .15);
+  }
+  .text-gradient{
+    background:linear-gradient(95deg, hsl(var(--lime)) 0%, hsl(var(--cyan)) 55%, hsl(var(--gold)) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem 5rem;}
+
+  header.top{
+    position:sticky; top:0; z-index:50;
+    padding:1rem 0 0;
+  }
+  header.top .bar{
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    padding:.75rem 1.1rem;
+  }
+  .brand{display:flex; align-items:center; gap:.7rem; text-decoration:none; color:inherit;}
+  .brand .mark{
+    width:2.5rem; height:2.5rem; flex:0 0 auto; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(155deg, hsl(262 83% 45% / .6), hsl(var(--ink)));
+    color:hsl(var(--lime));
+  }
+  .brand span{font-weight:600; letter-spacing:-.01em; color:hsl(var(--sand)); font-size:1.05rem;}
+  .back-link{
+    display:inline-flex; align-items:center; gap:.4rem;
+    padding:.55rem 1rem; font-size:.82rem; font-weight:600; color:hsl(var(--sand));
+    text-decoration:none;
+  }
+  .back-link:active{transform:translateY(1px);}
+
+  main{padding-top:2.75rem;}
+
+  .doc{padding:2.4rem 1.8rem 2.8rem; margin-top:0;}
+  @media (min-width:640px){ .doc{padding:3.2rem 3rem 3.4rem;} }
+
+  .eyebrow{
+    font-family:'Space Grotesk',sans-serif; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+    color:hsl(var(--cyan)); font-weight:700; display:block; margin-bottom:.6rem;
+  }
+  h1.title{font-size:1.9rem; font-weight:700; margin:.1rem 0 0; letter-spacing:-.01em; text-wrap:balance;}
+  @media (min-width:640px){ h1.title{font-size:2.3rem;} }
+
+  .meta-row{
+    display:flex; flex-wrap:wrap; gap:.5rem 1.5rem;
+    font-family:'Space Grotesk',sans-serif; font-size:.78rem; color:hsl(var(--fg-muted));
+    margin:1.6rem 0 2.2rem; padding-bottom:1.8rem;
+    border-bottom:1px solid hsl(0 0% 100% / .08);
+  }
+  .meta-row b{color:hsl(var(--sand)); font-weight:700;}
+  .meta-row a{color:hsl(var(--lime)); text-decoration:none;}
+  .meta-row a:hover{text-decoration:underline;}
+
+  .tldr{padding:1.5rem 1.6rem; margin-bottom:2.6rem;}
+  .tldr .eyebrow{color:hsl(var(--gold)); margin-bottom:.8rem;}
+  .tldr ul{margin:0; padding-left:1.1rem;}
+  .tldr li{margin:.5rem 0; color:hsl(var(--fg));}
+  .tldr li::marker{color:hsl(var(--lime));}
+  .tldr strong{color:hsl(var(--sand));}
+
+  .lede{color:hsl(var(--fg-muted)); font-size:.98rem;}
+
+  h2{
+    font-size:1.08rem; font-weight:700; letter-spacing:-.005em;
+    margin:2.5rem 0 .9rem; text-wrap:balance; color:hsl(var(--sand));
+    display:flex; align-items:baseline; gap:.55rem;
+  }
+  h2 .num{
+    font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:.85rem;
+    color:hsl(var(--fg-muted));
+  }
+  p{margin:.85rem 0; color:hsl(var(--fg) / .92);}
+  a{color:hsl(var(--cyan));}
+  a:hover{color:hsl(var(--lime));}
+
+  code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.88em;
+    background:hsl(0 0% 100% / .08); padding:.1em .4em; border-radius:5px;
+  }
+
+  .callout{
+    padding:1.1rem 1.3rem; margin:1.4rem 0; font-size:.94rem; color:hsl(var(--fg-muted));
+    border-left:3px solid hsl(var(--gold));
+    border-radius:0 1rem 1rem 0;
+  }
+
+  footer.doc-foot{
+    margin-top:3rem; padding-top:1.6rem; border-top:1px solid hsl(0 0% 100% / .08);
+    font-family:'Space Grotesk',sans-serif; font-size:.78rem; color:hsl(var(--fg-muted));
+    display:flex; flex-wrap:wrap; gap:.5rem 1rem; justify-content:space-between;
+  }
+
+  .site-foot{
+    text-align:center; padding:2.5rem 1rem 0; font-size:.78rem; color:hsl(var(--fg-muted) / .8);
+  }
+  .site-foot a{color:hsl(var(--lime)); text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap" style="padding-bottom:0;">
+    <div class="clay bar">
+      <a href="https://santoryulabs.com/" class="brand">
+        <span class="clay-btn mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 40 L34 14" />
+            <path d="M28 8 L31 11 L14 28 L11 25 Z" />
+            <path d="M40 40 L14 14" />
+            <path d="M20 8 L17 11 L34 28 L37 25 Z" />
+            <path d="M24 6 V42" opacity="0.55" />
+          </svg>
+        </span>
+        <span>Santoryu Labs</span>
+      </a>
+      <a href="https://santoryulabs.com/" class="clay-btn back-link">← Volver al sitio</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <article class="clay doc">
+
+      <span class="eyebrow">Cosmic Shutter · Santoryu Labs</span>
+      <h1 class="title">Privacy <span class="text-gradient">Policy</span></h1>
+
+      <div class="meta-row">
+        <span><b>Effective:</b> September 3, 2026</span>
+        <span><b>Applies to:</b> the Cosmic Shutter Android app</span>
+        <span><b>Contact:</b> <a href="mailto:cosmicshutter@santoryulabs.com">cosmicshutter@santoryulabs.com</a></span>
+      </div>
+
+      <div class="clay-inset tldr">
+        <span class="eyebrow">In short</span>
+        <ul>
+          <li>Cosmic Shutter collects <strong>no personal data, of any kind, ever.</strong></li>
+          <li>The app works fully offline — it never connects to the internet.</li>
+          <li>There's no account, no login, no analytics, and no ads.</li>
+          <li>Nothing you enter ever leaves your phone.</li>
+        </ul>
+      </div>
+
+      <p class="lede">Cosmic Shutter is a scorekeeping companion for the Cosmolancer tabletop game, built by a fan for other players at the table. This page explains, plainly, what the app does and doesn't do with your information — because "we don't collect anything" still deserves to be written down properly.</p>
+
+      <h2><span class="num">1.</span>Data we collect</h2>
+      <p>None. Cosmic Shutter does not collect, transmit, or store any personal data on any server, because it has no server to send anything to. There is no sign-up, no email address requested, no device identifier read, and no third-party SDK embedded in the app that could do any of this on our behalf.</p>
+
+      <h2><span class="num">2.</span>What happens to the scores you enter</h2>
+      <p>Player names, tile placements, and round scores you enter during a game are held only in the app's memory while you're playing, and optionally saved to your device's local storage so you can resume a game later. That save lives on your phone alone — Cosmic Shutter has no way to read it back, copy it, or send it anywhere. Uninstalling the app removes it, same as with any other local file.</p>
+
+      <h2><span class="num">3.</span>Permissions</h2>
+      <p>The app requests no runtime permissions — no camera, no contacts, no location, no storage access beyond its own local save file. If a future update ever needed a new permission, that request would explain, at the moment you grant it, exactly what it's for.</p>
+
+      <h2><span class="num">4.</span>Analytics, ads, and tracking</h2>
+      <p>There are none. No analytics library, no ad network, no crash-reporting service phoning home, no cookies (the app isn't a website), and nothing resembling a tracker of any kind.</p>
+
+      <h2><span class="num">5.</span>Children's privacy</h2>
+      <p>Because the app collects no data from anyone, this holds equally for players of any age, including children. There's simply nothing being gathered for the policy to restrict.</p>
+
+      <h2><span class="num">6.</span>Changes to this policy</h2>
+      <p>If Cosmic Shutter ever changes in a way that touches this policy — say, an online feature is added down the line — this page will be updated first, with a new effective date above, before that change ships.</p>
+
+      <div class="clay-inset callout">This is an independent, non-commercial fan project for the Cosmolancer board game. It isn't affiliated with, endorsed by, or produced by the game's publisher.</div>
+
+      <h2><span class="num">7.</span>Questions</h2>
+      <p>Write to <a href="mailto:cosmicshutter@santoryulabs.com">cosmicshutter@santoryulabs.com</a> with anything this page didn't answer.</p>
+
+      <footer class="doc-foot">
+        <span>Cosmic Shutter · fan-made scorekeeper · this page has no tracking either</span>
+      </footer>
+
+    </article>
+
+    <p class="site-foot">Parte de <a href="https://santoryulabs.com/">Santoryu Labs</a> — antes, durante y después de la partida.</p>
+  </div>
+</main>
+
+</body>
+</html>
