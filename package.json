@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:pages": "vite build && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
@@ -61,6 +62,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "autoprefixer": "^10.5.4",
+    "gh-pages": "^6.3.0",
     "html-inline": "^1.2.0",
     "oxlint": "^1.75.0",
     "parcel": "^2.16.4",

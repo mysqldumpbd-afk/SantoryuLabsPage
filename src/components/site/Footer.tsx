@@ -32,8 +32,8 @@ export function Footer() {
             <p className="font-display text-sm font-semibold text-sand">Contacto</p>
             <ul className="mt-4 space-y-2.5 text-sm text-foreground/65">
               <li>
-                <a href="mailto:hola@santoryulabs.com" className="hover:text-lime">
-                  hola@santoryulabs.com
+                <a href="mailto:contactus@santoryulabs.com" className="hover:text-lime">
+                  contactus@santoryulabs.com
                 </a>
               </li>
               <li className="text-foreground/45">santoryulabs.com</li>
@@ -43,7 +43,13 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-white/5 pt-6 text-xs text-foreground/45 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Santoryu Labs. Antes, durante y después de la partida.</p>
-          <p>Hecho para mesas que se juegan más de una vez.</p>
+          <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>Hecho para mesas que se juegan más de una vez.</span>
+            <span className="text-foreground/25">·</span>
+            <a href="/privacy-cosmic-shutter.html" className="hover:text-lime">
+              Aviso de privacidad — Cosmic Shutter
+            </a>
+          </p>
         </div>
       </div>
     </footer>

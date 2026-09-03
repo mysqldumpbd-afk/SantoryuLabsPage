@@ -18,10 +18,10 @@ export function Newsletter() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="mailto:hola@santoryulabs.com?subject=Quiero%20sumarme%20a%20Score%207"
+            href="mailto:score7@santoryulabs.com?subject=Quiero%20sumarme%20a%20Score%207"
             className="clay-btn inline-flex items-center gap-2 bg-lime px-7 py-3.5 text-sm font-semibold text-ink"
           >
-            Escribir a hola@santoryulabs.com
+            Escribir a score7@santoryulabs.com
             <IconArrowUpRight className="h-4 w-4" />
           </a>
           <a
